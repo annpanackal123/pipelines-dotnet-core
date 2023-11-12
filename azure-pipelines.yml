@@ -21,6 +21,9 @@ steps:
     publishWebProjects: true
 - task: DotNetCoreCLI@2
   inputs:
+    command: 'run'
+- task: DotNetCoreCLI@2
+  inputs:
     command: 'test'
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
